@@ -12,7 +12,9 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin:"https://todo-app-frontend-437c.onrender.com"
+}));
 app.use(express.json());
 
 app.get('/api/health', (req, res) => {
